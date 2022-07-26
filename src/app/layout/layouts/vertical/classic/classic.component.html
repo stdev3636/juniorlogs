@@ -1,0 +1,98 @@
+<!-- Wrapper -->
+<div class="flex flex-col flex-auto w-full min-w-0">
+
+    <!-- Header -->
+    <div
+        class="relative flex flex-0 items-center w-full h-18 px-4 md:px-6 z-49 shadow dark:shadow-none dark:border-b bg-main print:hidden">
+        <!-- Navigation toggle button -->
+        <!-- <button mat-icon-button (click)="toggleNavigation('mainNavigation')">
+            <mat-icon [svgIcon]="'heroicons_outline:menu'"></mat-icon> 
+        </button> -->
+        <!-- Components -->
+<div class="flex items-center">
+<img src="assets/images/logo/logo 1.png"/>
+</div>
+<div class="flex h-full items-center pl-24">
+    <p class="border-black border-l border-opacity-20 capitalize font-extrabold leading-9 pl-2.5">System portal :<span class="font-normal pl-1">Finance & Account > Account</span></p>
+</div>
+
+        <div class="flex items-center pl-2 ml-auto space-x-1 sm:space-x-2">
+            
+            <fuse-fullscreen class="hidden md:block txtblack"></fuse-fullscreen>
+            
+            <mat-icon class="txtblack">notification_important</mat-icon>
+            <mat-icon class="txtblack">error</mat-icon>
+            <span class="flex items-center usr-inf">
+                <span class="font-semibold text-accent-700">John Doe</span>
+                <user></user>
+            </span>
+            
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex">
+
+        <div class="w-1/6">
+            <!-- Navigation -->
+            <fuse-vertical-navigation class=" bg-color1 print:hidden" [mode]="isScreenSmall ? 'over' : 'side'"
+                [name]="'mainNavigation'"  [opened]="!isScreenSmall">
+                <!-- Navigation header hook -->
+                <ng-container fuseVerticalNavigationContentHeader>
+                    <div class="portal-dropdown">
+                        <div class="relative">
+                            <!-- The div containing the selected value and an icon to visually indicate if the dropdown is open or closed -->
+                            <div (click)="portalselect()"
+                                class="relative w-fit px-4 py-2  flex justify-center items-center cursor-pointer icon-select">
+                                <div class="flex mr-auto">
+                                    <div class="icon-calendarr mr-2">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0C3.44772 0 3 0.447715 3 1V2H2C0.895431 2 0 2.89543 0 4V14C0 15.1046 0.895431 16 2 16H14C15.1046 16 16 15.1046 16 14V4C16 2.89543 15.1046 2 14 2H13V1C13 0.447715 12.5523 0 12 0C11.4477 0 11 0.447715 11 1V2H5V1C5 0.447715 4.55228 0 4 0ZM4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H12C12.5523 7 13 6.55228 13 6C13 5.44772 12.5523 5 12 5H4Z" fill="white"/>
+                                            </svg>
+                                            
+                                            
+                                    </div>
+                                    {{ SelectedItem }}
+                                </div>
+                                <div>
+                                    <svg *ngIf="!Show" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                    <svg *ngIf="Show" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- The div containing the available items -->
+                            <div *ngIf="Show"
+                                class="absolute w-fit py-1 mt-2 border border-1 border-neutral-400 rounded-md cursor-pointer">
+                                <div (click)="select(item)" *ngFor="let item of Items"
+                                    class="py-2 px-4 w-full hover:bg-neutral-100">
+                                    {{ item }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </ng-container>
+            </fuse-vertical-navigation>
+
+        </div>
+        <div class="w-4/5">
+            <!-- *ngIf="true" hack is required here for router-outlet to work correctly.
+             Otherwise, layout changes won't be registered and the view won't be updated! -->
+            <router-outlet *ngIf="true"></router-outlet>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <!-- <div
+        class="relative flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 z-49 border-t bg-card dark:bg-transparent print:hidden">
+        <span class="font-medium text-secondary">Fuse &copy; {{currentYear}}</span>
+    </div> -->
+
+</div>

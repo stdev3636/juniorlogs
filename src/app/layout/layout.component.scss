@@ -1,0 +1,233 @@
+layout {
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    /* Base styles for individual layouts */
+    >* {
+        position: relative;
+        display: flex;
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    /* Base styles for components that load as a route */
+    router-outlet {
+
+        +* {
+            position: relative;
+            display: flex;
+            flex: 1 1 auto;
+            width: 100%;
+        }
+    }
+}
+
+
+$headerbg : #E3F2F1;
+$sidebar-color: #009688;
+$gray_bg: #F6F8FB;
+$color1: #EF4444;
+$color2: #EAECF7;
+$colorblack: #111827;
+
+.txtblack
+{
+color: $colorblack;
+}
+
+
+.bg-color1 {
+    background-color: $sidebar-color;
+}
+
+
+.bg-color2 {
+    background-color: $color1;
+}
+
+.bg-color3 {
+    background-color: $color2;
+}
+
+
+
+.gray_bg {
+    background-color: $gray_bg;
+
+}
+
+.bg-main {
+    background-color: $headerbg;
+}
+
+mat-tab-group.mat-custom mat-tab-header.mat-tab-header {
+    padding-top: 25px;
+    border-bottom: 2px solid #f1f5f9 !important;
+    padding-bottom: 0px;
+}
+
+.portal-dropdown .icon-select {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.portal-dropdown {
+    margin-top: 15px;
+}
+
+.portal-dropdown .icon-select>div {
+    align-items: center;
+}
+
+.portal-dropdown .icon-select+.absolute {
+    width: 100%;
+    max-width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+}
+
+.portal-dropdown .icon-select+.absolute div:not(:first-child) {
+    border-top: 1px solid #dfdfdf;
+}
+
+
+.checktble-dropdown .icon-select>div {
+    align-items: center;
+}
+
+.checktble-dropdown .icon-select+.absolute {
+    width: 100%;
+    background-color: #fff;
+    max-width: 140px;
+    z-index: 999;
+}
+
+.checktble-dropdown .icon-select+.absolute div:not(:first-child) {
+    border-top: 1px solid #dfdfdf;
+}
+
+mat-tab-group.mat-tab-group.mat-custom .mat-tab-body-wrapper {
+    height: 100%;
+}
+
+
+example .mat-tab-group mat-tab-body .mat-tab-body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.data-tableui thead tr th {
+    background-color: #EAECF7;
+    color: #181818 !important;
+    font-size: 15px;
+}
+
+.usr-inf span.mat-button-wrapper span.rounded-full {
+    border: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+}
+
+.txtblack svg
+{
+    color: $colorblack;
+}
+
+example .mat-tab-labels .mat-tab-label-active {
+    color: #009688 !important;
+    position: relative;
+    border-radius: 0px !important;
+}
+
+
+.mat-tab-labels .mat-tab-label-active .mat-tab-label-content {
+    position: relative;
+    text-align: center !important;
+}
+
+.mat-tab-labels .mat-tab-label-active .mat-tab-label-content:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -9px;
+    z-index: 99;
+    background: #009688;
+    border-radius: 0px !important;
+    }
+
+
+    .options-more {
+        position: absolute;
+        right: -18px;
+        top: 280px;
+        transform: translateY(-50%);
+    }
+
+    classic-layout .w-4\/5 {
+        width: 82% !important;
+    }
+    
+    .option-show {
+        background-color: #009688;
+        height: 31px;
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 29px;
+    }
+    
+    .option-show svg {
+        width: 28px;
+        height: 19px;
+    }
+
+    .otion-action {
+        height: 31px;
+    }
+
+.option-action .option-sho a:hover, .icon-filterz a:hover
+{
+    cursor: pointer;
+}
+
+.option-action .option-sho a {
+    display: block;
+    width: 29px;
+}
+
+.option-action .option-sho li {
+    margin-bottom: 6px;
+}
+
+
+.data-tble tfoot tr td {
+    background-color: #009688;
+    color: #fff !important;
+    font-weight: 700;
+}
+
+.data-tble thead tr th {
+    background-color: #EAECF7;
+    color: #000 !important;
+    font-size: 13px;
+}
+
+.data-tble tbody tr td {
+    border: none;
+    padding: 20px 15px !important;
+    text-align: left;
+}
+
+.data-tble thead tr th .mat-sort-header-container {padding-left: 15px;}

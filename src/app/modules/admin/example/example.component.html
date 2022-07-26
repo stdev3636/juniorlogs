@@ -1,0 +1,480 @@
+<div class="flex flex-col flex-auto min-w-0 pt-4 pr-3">
+
+    <!-- Main -->
+    <div class="flex-auto bg-white h-300 min-h-200 max-h-300 rounded-lg">
+        <div class="options-more">
+            <div class="icon-filterz">
+                <a *ngIf="!hideicon" (click)="showexportoption()">
+                    <svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0H23C26.3137 0 29 2.68629 29 6V29C29 32.3137 26.3137 35 23 35H0V0Z"
+                            fill="#7A9DC2" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.55005 13.25C8.55005 12.7806 8.93061 12.4 9.40005 12.4H19.6C20.0695 12.4 20.45 12.7806 20.45 13.25C20.45 13.7194 20.0695 14.1 19.6 14.1H9.40005C8.93061 14.1 8.55005 13.7194 8.55005 13.25Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.55005 17.5C8.55005 17.0306 8.93061 16.65 9.40005 16.65H14.5C14.9695 16.65 15.35 17.0306 15.35 17.5C15.35 17.9694 14.9695 18.35 14.5 18.35H9.40005C8.93061 18.35 8.55005 17.9694 8.55005 17.5Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.55005 21.75C8.55005 21.2806 8.93061 20.9 9.40005 20.9H19.6C20.0695 20.9 20.45 21.2806 20.45 21.75C20.45 22.2194 20.0695 22.6 19.6 22.6H9.40005C8.93061 22.6 8.55005 22.2194 8.55005 21.75Z"
+                            fill="white" />
+                    </svg>
+                </a>
+            </div>
+            <div class="mt-2 option-action" *ngIf="!moreinfo">
+                <div class="option-sho">
+                    <ng-template #HtmlContent>
+                        <p>Hello i'm a <strong>bold</strong> text!</p>
+                      </ng-template>
+                        
+                      
+                    <ul>
+                        <li (click)="closeoption()">
+                            <a>
+                                <div class="bg-color2 flex items-center justify-center otion-action rounded-r-lg">
+                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.648984 0.648961C0.980929 0.317015 1.51912 0.317015 1.85107 0.648961L5.50002 4.29792L9.14898 0.648961C9.48093 0.317015 10.0191 0.317015 10.3511 0.648961C10.683 0.980906 10.683 1.5191 10.3511 1.85104L6.70211 5.5L10.3511 9.14896C10.683 9.48091 10.683 10.0191 10.3511 10.351C10.0191 10.683 9.48093 10.683 9.14898 10.351L5.50002 6.70208L1.85107 10.351C1.51912 10.683 0.980929 10.683 0.648984 10.351C0.317038 10.0191 0.317038 9.48091 0.648984 9.14896L4.29794 5.5L0.648984 1.85104C0.317038 1.5191 0.317038 0.980906 0.648984 0.648961Z"
+                                            fill="white" />
+                                    </svg>
+                
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="bg-color1 flex items-center justify-center otion-action"
+                             contentType="template" 
+                            mat-raised-button 
+                            matTooltipPosition ="before"
+                            matTooltip="Export"
+                            matTooltipClass="tooltip-export"
+                            aria-label="Button that shows a red tooltip">
+                                <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.7671 5.10001H9.50908V6.59576H11.7671C12.4385 6.59576 12.9594 6.97865 12.9594 7.30837V13.9413C12.9594 14.2707 12.4385 14.6539 11.7671 14.6539L3.23237 14.6536C2.56098 14.6536 2.04002 14.2707 2.04002 13.941L2.0398 7.30875C2.0398 6.97929 2.56073 6.59614 3.23216 6.59614H5.48994V5.10038H3.23238C1.81249 5.10038 0.700012 6.07041 0.700012 7.30875V13.9416C0.700012 15.1802 1.81222 16.15 3.23238 16.15H11.7676C13.1873 16.15 14.3 15.18 14.3 13.9416L14.2998 7.30875C14.2996 6.07016 13.1874 5.1002 11.7673 5.1002L11.7671 5.10001Z"
+                                        fill="white" />
+                                    <path
+                                        d="M5.50803 4.18372C5.67919 4.18372 5.85012 4.11845 5.98087 3.98771L6.81807 3.15051V7.39156L6.81785 9.9535C6.81785 10.3228 7.11716 10.6221 7.48648 10.6221C7.85581 10.6221 8.15511 10.3228 8.15511 9.9535V3.10509L9.03746 3.98743C9.16799 4.11796 9.33914 4.18344 9.5103 4.18344C9.68123 4.18344 9.85239 4.11818 9.98314 3.98743C10.2444 3.72637 10.2444 3.30303 9.98314 3.04196L7.98676 1.04558C7.85623 0.915055 7.68529 0.850006 7.51435 0.850006H7.50916H7.50398C7.33304 0.850006 7.1621 0.914839 7.03157 1.04558L5.03519 3.04196C4.77392 3.30302 4.77392 3.72636 5.03519 3.98743C5.16572 4.11818 5.33665 4.18344 5.50803 4.18344V4.18372Z"
+                                        fill="white" />
+                                </svg> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <mat-tab-group animationDuration="0ms" class="mat-custom h-full">
+            <mat-tab label="Transaction List">
+                <p class="p-10">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sequi iure porro consequuntur
+                    officiis sint velit qui quis, doloremque repellat libero minima necessitatibus corrupti ipsa
+                    expedita voluptates illo dolorum doloribus?
+                    Ab voluptatibus natus tempore cumque tempora voluptas, quos maxime voluptatem dolorum culpa itaque,
+                    consequatur non tenetur quod corporis officia deserunt dolore quia, qui iusto accusantium ratione
+                    nam? Non, harum nulla.
+                    Aliquid, molestiae. Veniam culpa architecto voluptatem recusandae? Commodi blanditiis similique
+                    sequi.
+                </p>
+            </mat-tab>
+            <mat-tab label="Invoices">
+                <p class="p-10">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sequi iure porro consequuntur
+                    officiis sint velit qui quis, doloremque repellat libero minima necessitatibus corrupti ipsa
+                    expedita voluptates illo dolorum doloribus?
+                    Ab voluptatibus natus tempore cumque tempora voluptas, quos maxime voluptatem dolorum culpa itaque,
+                    consequatur non tenetur quod corporis officia deserunt dolore quia, qui iusto accusantium ratione
+                    nam? Non, harum nulla.
+                    Aliquid, molestiae. Veniam culpa architecto voluptatem recusandae? Commodi blanditiis similique
+                    sequi.
+                </p>
+            </mat-tab>
+            <mat-tab label="Payments">
+                <p class="p-10">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sequi iure porro consequuntur
+                    officiis sint velit qui quis, doloremque repellat libero minima necessitatibus corrupti ipsa
+                    expedita voluptates illo dolorum doloribus?
+                    Ab voluptatibus natus tempore cumque tempora voluptas, quos maxime voluptatem dolorum culpa itaque,
+                    consequatur non tenetur quod corporis officia deserunt dolore quia, qui iusto accusantium ratione
+                    nam? Non, harum nulla.
+                    Aliquid, molestiae. Veniam culpa architecto voluptatem recusandae? Commodi blanditiis similique
+                    sequi.
+                </p>
+            </mat-tab>
+            <mat-tab label="Credit Notes">
+                <p class="p-10">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sequi iure porro consequuntur
+                    officiis sint velit qui quis, doloremque repellat libero minima necessitatibus corrupti ipsa
+                    expedita voluptates illo dolorum doloribus?
+                    Ab voluptatibus natus tempore cumque tempora voluptas, quos maxime voluptatem dolorum culpa itaque,
+                    consequatur non tenetur quod corporis officia deserunt dolore quia, qui iusto accusantium ratione
+                    nam? Non, harum nulla.
+                    Aliquid, molestiae. Veniam culpa architecto voluptatem recusandae? Commodi blanditiis similique
+                    sequi.
+                </p>
+            </mat-tab>
+            <mat-tab label="Bond Payments">
+                <p class="p-10">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sequi iure porro consequuntur
+                    officiis sint velit qui quis, doloremque repellat libero minima necessitatibus corrupti ipsa
+                    expedita voluptates illo dolorum doloribus?
+                    Ab voluptatibus natus tempore cumque tempora voluptas, quos maxime voluptatem dolorum culpa itaque,
+                    consequatur non tenetur quod corporis officia deserunt dolore quia, qui iusto accusantium ratione
+                    nam? Non, harum nulla.
+                    Aliquid, molestiae. Veniam culpa architecto voluptatem recusandae? Commodi blanditiis similique
+                    sequi.
+                </p>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <div class='mytabstyle'>
+                        Age Debtors
+                    </div>
+                </ng-template>
+                <div class='margin1em'>
+                    <div class=" bg-white data-fieldwhite ng-star-inserted pl-4 pr-4">
+
+                        <div class="bg-gray-100">
+
+                            <div
+                                class=" gap-4 gray-bg1 grid grid-cols-4 ng-star-inserted p-4 rounded-l-2xl rounded-r-xl">
+                                <div class="col1 p-2">
+                                    <label class="block uppercase tracking-wide text-gray-700 text-md font-bold mb-2"
+                                        for="grid-state">
+                                        Child
+                                    </label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                            <option>Select dropdown</option>
+                                            <option>With options</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col1 p-2">
+                                    <label class="block uppercase tracking-wide text-gray-700 text-md font-bold mb-2"
+                                        for="grid-state">
+                                        Payee
+                                    </label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                            <option>Select dropdown</option>
+                                            <option>With options</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col1 p-2">
+                                    <div class="check-fix flex h-full items-end">
+                                        <label class="relative">
+                                            <input type="checkbox" class="absolute default:ring-2 h-5 top-1.5 w-5" />
+                                            <span class="inline-block leading-6 pl-7 text-accent-700 text-xl">Include
+                                                those
+                                                parents
+                                                who are in credit</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div class="col1 p-2">
+                                    <div class="flex gap-5 h-full w-full items-end">
+                                        <div><button class="bg-color1 p-3 rounded-lg text-white w-44">Save
+                                                Changes</button>
+                                        </div>
+                                        <div><button class="bg-color2 block h-12 p-2 relative rounded-full w-12">
+                                                <mat-icon
+                                                    class="mat-icon mat-icon-no-color material-icons notranslate origin-[50%_50%] pt-2.5 text-white">
+                                                    autorenew</mat-icon>
+                                            </button></div>
+                                        <div><button (click)="showmore()"
+                                                class="bg-color3 block flex h-12 items-center justify-center p-2 relative rounded-full w-12"><svg
+                                                    class="" width="16" height="9" viewBox="0 0 16 9" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 1L8 8L1 1" stroke="#232323" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="flex" *ngIf="!moreOptions">
+                                <div animationDuration="2000ms"
+                                    class="flex gap-6 gray-bg1 ng-star-inserted p-4 rounded-l-2xl rounded-r-xl w-full items-end">
+                                    <div class="col1 p-2 w-90">
+                                        <label
+                                            class="block uppercase tracking-wide text-gray-700 text-md font-bold mb-2"
+                                            for="grid-state">
+                                            Start Date
+                                        </label>
+                                        <div class="relative">
+                                            <input type="date"
+                                                class="block appearance-none bg-white w-full  border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+
+                                        </div>
+                                    </div>
+                                    <div class="col1 p-2 w-90">
+                                        <label
+                                            class="block uppercase tracking-wide text-gray-700 text-md font-bold mb-2"
+                                            for="grid-state">
+                                            End Date
+                                        </label>
+                                        <div class="relative">
+                                            <input type="date"
+                                                class="block appearance-none bg-white w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                        </div>
+                                    </div>
+                                    <div class="col1 mb-2.5 p-2">
+                                        <ul class="flex gap-14">
+                                            <li>
+                                                <label>
+                                                    <div class="flex items-center"><span class="mr-2 mt-0.5"><input
+                                                                type="checkbox" class="h-5 w-4"></span><span
+                                                            class="font-normal text-lg">Include $0
+                                                            accounts</span></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+
+
+                                                    <div class="flex items-center"><span class="mr-2 mt-0.5"><input
+                                                                type="checkbox" class="h-5 w-4"></span><span
+                                                            class="font-normal text-lg">Winz records</span></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <div class="flex items-center"><span class="mr-2 mt-0.5"><input
+                                                                type="checkbox" class="h-5 w-4"></span><span
+                                                            class="font-normal text-lg">Monthly</span></div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <div class="flex items-center"><span class="mr-2 mt-0.5"><input
+                                                                type="checkbox" class="h-5 w-4"></span><span
+                                                            class="font-normal text-lg">Weekly</span></div>
+                                                </label>
+                                            </li>
+
+                                        </ul>
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="grid grid-cols-1 pt-6">
+                        <div class="flex gap-2.5 items-center">
+                            <div class="checktble-dropdown">
+                                <div class="">
+                                    <!-- The div containing the selected value and an icon to visually indicate if the dropdown is open or closed -->
+                                    <div (click)="dataselection()"
+                                        class="relative w-fit px-4 py-2  flex justify-center items-center cursor-pointer icon-select">
+                                        <div class="flex mr-auto">
+                                            <div class="icon-calendarr mr-2">
+                                                <input type="checkbox" />
+                                            </div>
+                                            <span class="hidden"> {{ SelectedItem }}</span>
+                                        </div>
+                                        <div>
+                                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1.5L5 5L1.5 1.5" stroke="#111827" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <!-- The div containing the available items -->
+                                    <div *ngIf="checkshow"
+                                        class="absolute w-fit py-1 mt-2 border border-neutral-400 rounded-md cursor-pointer">
+                                        <div *ngFor="let item of Items" class="py-2 px-4 w-full hover:bg-neutral-100">
+                                            <div class="flex gap-1.5">
+                                                <input type="checkbox" />
+                                                {{ item }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div><button class="gray_bg flex gap-1.5 items-center p-3 rounded-md">
+                                    <mat-icon class="text-black"> email</mat-icon>Email
+                                </button></div>
+                            <div><button class="gray_bg flex gap-1.5 items-center p-3 rounded-md">
+                                    <svg class="h-5 w-5" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.2878 10.1614C11.4467 10.1614 11.5753 10.0307 11.5753 9.86933C11.5753 9.70799 11.4467 9.57725 11.2878 9.57725H3.69955C3.54067 9.57725 3.41211 9.70798 3.41211 9.86933C3.41211 10.0307 3.54066 10.1614 3.69955 10.1614H4.27201V14.2923C4.27201 14.4529 4.40128 14.5843 4.55945 14.5843H10.4257C10.5867 14.5843 10.7132 14.4529 10.7132 14.2923V10.1614H11.2878ZM9.19397 13.093H5.79297C5.63408 13.093 5.50553 12.9623 5.50553 12.801C5.50553 12.6396 5.63407 12.5089 5.79297 12.5089H9.19397C9.35285 12.5089 9.48141 12.6396 9.48141 12.801C9.48141 12.9622 9.35276 13.093 9.19397 13.093ZM9.19397 11.6531H5.79297C5.63408 11.6531 5.50553 11.5224 5.50553 11.3611C5.50553 11.1997 5.63407 11.069 5.79297 11.069H9.19397C9.35285 11.069 9.48141 11.1997 9.48141 11.3611C9.48141 11.5223 9.35276 11.6531 9.19397 11.6531Z"
+                                            fill="#232323" />
+                                        <path
+                                            d="M13.162 4.69818H1.82601C1.19652 4.69818 0.687848 5.21513 0.687848 5.85469L0.687744 10.6416C0.687744 11.2812 1.19649 11.7981 1.8259 11.7981H3.69716V10.7452C3.22271 10.7439 2.83715 10.3516 2.83715 9.8692C2.83715 9.38604 3.22393 8.99299 3.69945 8.99299L11.2877 8.9931C11.7632 8.9931 12.15 9.38611 12.15 9.8693C12.15 10.3525 11.7632 10.7455 11.2877 10.7455V11.7982H13.1618C13.7884 11.7982 14.3 11.2812 14.3 10.6417L14.3001 5.8548C14.3001 5.21515 13.7885 4.6982 13.1619 4.6982L13.162 4.69818Z"
+                                            fill="#232323" />
+                                        <path
+                                            d="M12.268 3.38994C12.268 2.91386 11.8829 2.52255 11.4144 2.52255H11.2878V4.11433H12.2681L12.268 3.38994Z"
+                                            fill="#232323" />
+                                        <path
+                                            d="M3.6971 2.52241H3.57335C3.10202 2.52241 2.71973 2.91374 2.71973 3.3898V4.11419H3.69711L3.6971 2.52241Z"
+                                            fill="#232323" />
+                                        <path
+                                            d="M10.7131 0.857753C10.7131 0.69419 10.5867 0.565676 10.4257 0.565676H4.55941C4.40136 0.565676 4.27197 0.694176 4.27197 0.857753V4.11427H10.7131V0.857753ZM9.19393 3.35096H5.79293C5.63405 3.35096 5.50549 3.22024 5.50549 3.05888C5.50549 2.89754 5.63404 2.76681 5.79293 2.76681H9.19393C9.35282 2.76681 9.48137 2.89753 9.48137 3.05888C9.48137 3.22022 9.35272 3.35096 9.19393 3.35096ZM9.19393 1.91108H5.79293C5.63405 1.91108 5.50549 1.78035 5.50549 1.619C5.50549 1.45766 5.63404 1.32692 5.79293 1.32692H9.19393C9.35282 1.32692 9.48137 1.45765 9.48137 1.619C9.48137 1.78034 9.35272 1.91108 9.19393 1.91108Z"
+                                            fill="#232323" />
+                                    </svg>
+
+                                    Print</button></div>
+                            <div><button class="gray_bg flex gap-1.5 items-center p-3 rounded-md">
+                                    <svg class="h-5 w-5" width="11" height="14" viewBox="0 0 11 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.6499 0.200001C4.18046 0.200001 3.7999 0.580559 3.7999 1.05C3.7999 1.51944 4.18046 1.9 4.6499 1.9H6.3499C6.81934 1.9 7.1999 1.51944 7.1999 1.05C7.1999 0.580559 6.81934 0.200001 6.3499 0.200001H4.6499Z"
+                                            fill="#111827" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.399902 2.75C0.399902 1.81112 1.16102 1.05 2.0999 1.05C2.0999 2.45833 3.24158 3.6 4.6499 3.6H6.3499C7.75823 3.6 8.8999 2.45833 8.8999 1.05C9.83879 1.05 10.5999 1.81112 10.5999 2.75V12.1C10.5999 13.0389 9.83879 13.8 8.8999 13.8H2.0999C1.16102 13.8 0.399902 13.0389 0.399902 12.1V2.75ZM2.9499 6.15C2.48046 6.15 2.0999 6.53056 2.0999 7C2.0999 7.46944 2.48046 7.85 2.9499 7.85H2.9584C3.42784 7.85 3.8084 7.46944 3.8084 7C3.8084 6.53056 3.42784 6.15 2.9584 6.15H2.9499ZM5.4999 6.15C5.03046 6.15 4.6499 6.53056 4.6499 7C4.6499 7.46944 5.03046 7.85 5.4999 7.85H8.0499C8.51934 7.85 8.8999 7.46944 8.8999 7C8.8999 6.53056 8.51934 6.15 8.0499 6.15H5.4999ZM2.9499 9.55C2.48046 9.55 2.0999 9.93056 2.0999 10.4C2.0999 10.8694 2.48046 11.25 2.9499 11.25H2.9584C3.42784 11.25 3.8084 10.8694 3.8084 10.4C3.8084 9.93056 3.42784 9.55 2.9584 9.55H2.9499ZM5.4999 9.55C5.03046 9.55 4.6499 9.93056 4.6499 10.4C4.6499 10.8694 5.03046 11.25 5.4999 11.25H8.0499C8.51934 11.25 8.8999 10.8694 8.8999 10.4C8.8999 9.93056 8.51934 9.55 8.0499 9.55H5.4999Z"
+                                            fill="#111827" />
+                                    </svg>
+                                    PDF</button></div>
+                        </div>
+                    </div>
+                    <div class="data-tableui flex w-full mt-6 flex-col">
+                     
+
+
+
+
+
+
+                        <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator> -->
+                        <!-- <mat-paginator [pageSizeOptions]="[6, 12, 24]" aria-label="Select page of periodic elements">
+                        </mat-paginator> -->
+                    </div>
+
+
+
+
+
+                    <table mat-table [dataSource]="dataSource"  matSort (matSortChange)="announceSortChange($event)" class="mat-elevation-z8 w-full shadow-none data-tble">
+                        <!-- Item Column -->
+                        <ng-container matColumnDef="paynme">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by paynme"> Payee</th>
+                          <td mat-cell *matCellDef="let transaction"> {{transaction.paynme}} </td>
+                          <td mat-footer-cell *matFooterCellDef class="">Total</td>
+                        </ng-container>
+
+                            <!-- Item Column -->
+                            <ng-container matColumnDef="childdata">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by childdata"> Child</th>
+                                <td mat-cell *matCellDef="let transaction"> {{transaction.childdata}} </td>
+                                <td mat-footer-cell *matFooterCellDef></td>
+                              </ng-container>
+
+                                <!-- Item Column -->
+                                <ng-container matColumnDef="weeks3">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weeks3"> 3 Weeks</th>
+                                    <td mat-cell *matCellDef="let transaction">{{transaction.weeks3 | currency}}</td>
+                                    <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td>
+                                </ng-container>
+
+                                  <!-- Item Column -->
+                                  <ng-container matColumnDef="weeks2">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weeks2"> 2 Weeks</th>
+                                    <td mat-cell *matCellDef="let transaction">{{transaction.weeks2 | currency}}</td>
+                                    <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td>
+                                </ng-container>
+
+
+                                 <!-- Item Column -->
+                                 <ng-container matColumnDef="weeks1">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weeks1">1 Weeks</th>
+                                    <td mat-cell *matCellDef="let transaction">{{transaction.weeks1 | currency}}</td>
+                                    <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td>
+                                </ng-container>
+
+                                    <!-- Item Column -->
+                                    <ng-container matColumnDef="current">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by current">Current</th>
+                                        <td mat-cell *matCellDef="let transaction">{{transaction.current | currency}}</td>
+                                        <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td>
+                                    </ng-container>
+
+                                    <!-- Item Column -->
+                                    <ng-container matColumnDef="amount">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by amount">Pending Amount</th>
+                                        <td mat-cell *matCellDef="let transaction">{{transaction.amount | currency}}</td>
+                                        <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td>
+                                    </ng-container>
+    
+                                    <!-- Item Column -->
+                                    <ng-container matColumnDef="payment">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by payment">Over Payment</th>
+                                        <td mat-cell *matCellDef="let transaction">{{transaction.payment | currency}}</td>
+                                            <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td>
+                                    </ng-container>
+
+                                          <!-- Item Column -->
+                                          <ng-container matColumnDef="creditNote">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by creditNote">Pending Creditnote</th>
+                                            <td mat-cell *matCellDef="let transaction">{{transaction.creditNote | currency}}</td>
+                                            <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td>
+                                           
+                                        </ng-container>
+
+                                          <!-- Item Column -->
+                                          <ng-container matColumnDef="pendingAmount">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by pendingAmount">Total Pending Amount</th>
+                                            <td mat-cell *matCellDef="let transaction">{{transaction.pendingAmount | currency}}</td>
+                                            <td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td>
+                                        </ng-container>
+    
+
+                      
+                        <!-- Cost Column -->
+                        <!-- <ng-container matColumnDef="cost">
+                          <th mat-header-cell *matHeaderCellDef> Cost </th>
+                          <td mat-cell *matCellDef="let transaction"> {{transaction.cost | currency}} </td>
+                          <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+                        </ng-container> -->
+                      
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+
+                      </table>
+
+                        <mat-paginator [pageSizeOptions]="[6, 12, 24]" aria-label="Select page of periodic elements">
+                        </mat-paginator>
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+            </mat-tab>
+        </mat-tab-group>
+        <!-- CONTENT GOES HERE -->
+
+
+    </div>
+
+</div>
